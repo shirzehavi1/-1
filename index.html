@@ -1,74 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tableau Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Tableau Dashboard</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f9f9f9;
-      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    h1 {
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px 0;
+      width: 100%;
       text-align: center;
-      color: #2c3e50;
     }
-    .dashboard-container {
-      max-width: 1000px;
-      margin: auto;
+    .description {
+      max-width: 800px;
+      margin: 30px;
+      font-size: 1.2em;
+      color: #333;
+      text-align: center;
+    }
+    .button-group {
+      margin-bottom: 20px;
+    }
+    .button-group button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .button-group button:hover {
+      background-color: #357ab8;
+    }
+    .tableauPlaceholder {
+      width: 90%;
+      max-width: 1200px;
+      margin-bottom: 40px;
     }
   </style>
 </head>
 <body>
-  <div class="dashboard-container">
-    <h1>Tableau Dashboard</h1>
+  <header>
+    <h1>Interactive Tableau Dashboard</h1>
+  </header>
 
-    <div class='tableauPlaceholder' id='viz1745085465451' style='position: relative'>
-      <noscript>
-        <a href='#'>
-          <img alt='Dashboard 1 '
-            src='https://public.tableau.com/static/images/1_/1_17450852092190/Dashboard1/1_rss.png'
-            style='border: none' />
-        </a>
-      </noscript>
-      <object class='tableauViz' style='display:none;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-        <param name='embed_code_version' value='3' />
-        <param name='site_root' value='' />
-        <param name='name' value='1_17450852092190/Dashboard1' />
-        <param name='tabs' value='no' />
-        <param name='toolbar' value='yes' />
-        <param name='static_image'
-          value='https://public.tableau.com/static/images/1_/1_17450852092190/Dashboard1/1.png' />
-        <param name='animate_transition' value='yes' />
-        <param name='display_static_image' value='yes' />
-        <param name='display_spinner' value='yes' />
-        <param name='display_overlay' value='yes' />
-        <param name='display_count' value='yes' />
-        <param name='language' value='en-US' />
-        <param name='filter' value='publish=yes' />
-      </object>
-    </div>
-
-    <script type='text/javascript'>
-      var divElement = document.getElementById('viz1745085465451');
-      var vizElement = divElement.getElementsByTagName('object')[0];
-      if (divElement.offsetWidth > 800) {
-        vizElement.style.width = '100%';
-        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-      } else if (divElement.offsetWidth > 500) {
-        vizElement.style.width = '100%';
-        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-      } else {
-        vizElement.style.width = '100%';
-        vizElement.style.height = '1427px';
-      }
-      var scriptElement = document.createElement('script');
-      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-      vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
+  <div class="description">
+    <p>Welcome to my data visualization project! Below you will find an interactive Tableau dashboard that presents insightful analytics. Use the buttons to filter or navigate as needed.</p>
   </div>
+
+  <div class="button-group">
+    <button onclick="alert('This could apply a filter or trigger a Tableau action.')">Apply Filter</button>
+    <button onclick="alert('This could reset the dashboard view.')">Reset View</button>
+  </div>
+
+  <div class='tableauPlaceholder' id='viz1745085465451' style='position: relative'>
+    <noscript>
+      <a href='#'><img alt='Dashboard 1 ' src='https://public.tableau.com/static/images/1_/1_17450852092190/Dashboard1/1_rss.png' style='border: none' /></a>
+    </noscript>
+    <object class='tableauViz' style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+      <param name='embed_code_version' value='3' />
+      <param name='site_root' value='' />
+      <param name='name' value='1_17450852092190/Dashboard1' />
+      <param name='tabs' value='no' />
+      <param name='toolbar' value='yes' />
+      <param name='static_image' value='https://public.tableau.com/static/images/1_/1_17450852092190/Dashboard1/1.png' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en-US' />
+      <param name='filter' value='publish=yes' />
+    </object>
+  </div>
+
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz1745085465451');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    if (divElement.offsetWidth > 800) {
+      vizElement.style.width = '100%';
+      vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    } else if (divElement.offsetWidth > 500) {
+      vizElement.style.width = '100%';
+      vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    } else {
+      vizElement.style.width = '100%';
+      vizElement.style.height = '1427px';
+    }
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
 </body>
 </html>
